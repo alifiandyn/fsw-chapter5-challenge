@@ -1,0 +1,411 @@
+/* Global Custom Configuration */
+h3 {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.default-btn {
+  background: linear-gradient(194.68deg, #ffb548 11.27%, #f3af34 90.4%);
+  width: 260.36px;
+  height: 60px;
+  border-radius: 4px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #1a1917;
+}
+
+.info-head {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  color: #ffb548;
+  text-transform: uppercase;
+}
+
+.info-text {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+
+.info-muted {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+/* End Global Custom Configuration */
+
+/* Section 1 Style */
+.main-bg {
+  background-image: radial-gradient(189.96% 61.18% at 50% 38.82%, rgba(255, 181, 72, 0) 0%, rgba(52, 44, 29, 0.80319) 73.22%, #08090a 99.74%), url("../../assets/main-bg.jpg");
+  min-height: 960px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+/* CSS For Navbar */
+nav {
+  min-height: 90px;
+  background: #00000080;
+}
+
+.nav-font-style {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 33px;
+  letter-spacing: 0.1em;
+  text-align: left;
+  color: white !important;
+}
+
+.nav-link-style {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0.1em;
+  color: white !important;
+  margin-left: 2rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .nav-link-style {
+    margin-left: 0;
+  }
+}
+/* End CSS For Navbar */
+
+/* Section 1 Banner Style */
+.col {
+  color: white;
+}
+
+.col h1 {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 4.5rem;
+  line-height: 83px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0 0 3rem 0;
+}
+
+.col h3 {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  margin: 0 0 3rem 0;
+}
+
+.link-story-games {
+  text-decoration: none;
+  color: white;
+}
+
+.link-story-games:hover {
+  text-decoration: none;
+  color: #f3af34;
+}
+
+@media only screen and (max-width: 550px) {
+  .col h1 {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 44px;
+    line-height: 64px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 0 0 3rem 0;
+  }
+
+  .col h3 {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 28px;
+    letter-spacing: 2px;
+    margin: 0 0 3rem 0;
+  }
+
+  .default-btn {
+    background: linear-gradient(194.68deg, #ffb548 11.27%, #f3af34 90.4%);
+    width: 11.25rem;
+    height: 40px;
+    border-radius: 4px;
+    margin: 0 0 3rem 0;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    color: #1a1917;
+  }
+}
+/* End Section 1 Banner Style */
+/* End Section 1 Style */
+
+/* Section 2 Style */
+.galery-bg {
+  background-image: url("../../assets/the-games-bg.jpg");
+  min-height: 1050px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+/* End Section 2 Style */
+
+/* Section 3 Style */
+.feature-bg {
+  background-image: url("../../assets/features.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 800px;
+  color: white;
+  overflow: hidden;
+}
+
+/* Section 3 Timeline Style */
+.timeline {
+  list-style-type: none;
+  position: relative;
+  margin-bottom: 0 !important;
+}
+.side-line:before {
+  content: " ";
+  background: white;
+  display: inline-block;
+  position: absolute;
+  left: 29px;
+  width: 2px;
+  height: 100%;
+  z-index: 400;
+}
+ul.timeline > li {
+  padding-left: 2.5rem;
+  padding-bottom: 3.75rem;
+}
+ul.timeline.selected > li:before {
+  content: " ";
+  background: white;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid white;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+
+ul.timeline > li:before {
+  content: " ";
+  background: none;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid white;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  z-index: 400;
+}
+/* End Section 3 Timeline Style */
+/* End Section 3 Style */
+
+/* Section 4 Style */
+.system-requirment-bg {
+  background-image: url("../../assets/requirements.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 960px;
+  position: relative;
+  overflow: hidden;
+  color: white;
+}
+
+.system-requirment-bg h4 {
+  font-family: Arial;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 2px;
+  margin-top: 8.75rem;
+}
+
+.system-requirment-bg h1 {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 3.125rem 0 2rem 0;
+}
+
+.table-custom td {
+  padding: 1.25rem;
+  height: 8.125rem;
+}
+/* End Section 4 Style */
+
+/* Section 5 style */
+.top-score-bg {
+  background-image: radial-gradient(70.52% 37.27% at 24.21% 47.47%, rgba(35, 15, 15, 0) 0%, rgba(0, 0, 0, 0) 51.1%, #080a0b 99.74%), url("../../assets/top-score-fix.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 960px;
+  color: white;
+  overflow: hidden;
+}
+
+.top-score-bg .card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  width: 28rem;
+  min-height: 12.5rem;
+}
+
+.top-score-bg .img-profile {
+  width: 100%;
+  box-shadow: 2px 2px #ffb548;
+}
+
+.top-score-bg .top-score-name {
+  color: #ffb548;
+}
+
+.top-score-bg .player-status {
+  text-align: justify;
+  opacity: 0.5;
+}
+
+.top-score-bg .player-comment {
+  line-height: 25px;
+}
+/* End Section 5 style */
+
+/* Section 6 Style */
+.subscribe-bg {
+  background-color: #080a0b;
+  min-height: 810px;
+  position: relative;
+  overflow: hidden;
+}
+
+.subscribe-bg h3 {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.subscribe-bg h1 {
+  font-family: Arial;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 65px;
+  line-height: 75px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.subscribe-bg .info-text {
+  min-height: 140px;
+}
+
+.input-email-custom {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  color: #ffb548;
+}
+/* End Section 6 Style */
+
+/* Footer */
+footer {
+  background-color: #080a0b;
+  overflow: hidden;
+}
+
+.list-social-media {
+  min-height: 55px;
+}
+
+.footer-term {
+  min-height: 95px;
+}
+
+.footer-line {
+  border: 1px solid #ffffff;
+}
+
+.footer-term-text {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+/* End Footer */
