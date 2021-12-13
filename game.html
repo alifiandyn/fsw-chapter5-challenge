@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CSS and JS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- <script src="dist/js/bootstrap.bundle.min.js"></script> Button Collapse Navbar cannot work if this link active -->
+
+    <!-- Custom CSS by Alif -->
+    <link rel="stylesheet" href="dist/css/game-style.css" />
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" />
+
+    <title>ROCK PAPER SCISSORS</title>
+  </head>
+  <body>
+    <section>
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-sm-1 text-center">
+            <button class="btn" onclick="backHome()">
+              <span class="btn-back"><</span>
+            </button>
+          </div>
+          <div class="col-sm-1 text-center">
+            <img class="img-fluid" src="assets/game-logo.png" alt="" />
+          </div>
+          <div class="col-sm-10 game-title">ROCK PAPER SCISSORS</div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding: 0 15%">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-sm-4 col-4">
+            <p class="player-text">PLAYER 1</p>
+            <div class="text-center">
+              <div class="player-choose-rock my-5 choice">
+                <img class="img-fluid mx-auto player-choose player-choose-rock-img" src="assets/game-batu.png" alt="rock" />
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="player-choose-paper my-5 choice">
+                <img class="img-fluid mx-auto player-choose player-choose-paper-img" src="assets/game-kertas.png" alt="paper" />
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="player-choose-scissor my-5 choice">
+                <img class="img-fluid mx-auto player-choose player-choose-scissor-img" src="assets/game-gunting.png" alt="scissor" />
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-4 align-self-center">
+            <p class="versus-text">VS</p>
+          </div>
+          <div class="col-sm-4">
+            <p class="player-text">COM</p>
+            <div class="text-center">
+              <div class="com-choose-rock my-5 choice">
+                <img class="img-fluid com-choose-rock-img" src="assets/game-batu.png" alt="rock" />
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="com-choose-paper my-5 choice">
+                <img class="img-fluid mx-auto com-choose-paper-img" src="assets/game-kertas.png" alt="paper" />
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="com-choose-scissor my-5 choice">
+                <img class="img-fluid mx-auto com-choose-scissor-img" src="assets/game-gunting.png" alt="scissor" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container-fluid">
+        <div class="row justify-content-center py-5">
+          <button class="btn" onclick="refreshPage()">
+            <img class="img-fluid img-refresh text-center" src="assets/refresh-btn.png" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="dist/js/game.js"></script>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  height: 100%;
+  background-color: #9c835f;
+}
+
+.btn-back {
+  color: #724c21;
+  font-size: 4.5rem;
+  line-height: 6.125rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.game-title {
+  font-size: 2.25rem;
+  line-height: 3.125rem;
+  color: #f9b23d;
+}
+
+.player-text {
+  font-size: 2.25rem;
+  line-height: 3.125rem;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.versus-text {
+  font-size: 9rem;
+  line-height: 12.25rem;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #bd0000;
+}
+
+.choice {
+  width: 223px;
+  height: 204px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choosed {
+  background: #c4c4c4;
+  border-radius: 30px;
+}
+
+.img-refresh {
+  max-width: 77px;
+}
+
+.result-match {
+  margin: 0 60px;
+  height: 166px;
+  padding: 40px 20px;
+  background: #4c9654;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 2.375rem;
+  line-height: 3.25rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  transform: rotate(-30.98deg);
+}
+
+.result-match-draw {
+  margin: 0 60px;
+  height: 166px;
+  padding: 40px 20px;
+  background: #035b0c;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-size: 2.375rem;
+  line-height: 3.25rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #ffffff;
+  transform: rotate(-30.98deg);
+}
