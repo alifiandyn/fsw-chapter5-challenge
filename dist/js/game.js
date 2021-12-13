@@ -46,21 +46,21 @@ class playGame {
       return "draw";
     } else if (this.comChoice == "rock") {
       if (this.playerChoice == "paper") {
-        return "Player 1 win";
+        return "Player 1 <br> win";
       } else {
-        return "com win";
+        return "com <br> win";
       }
     } else if (this.comChoice == "paper") {
       if (this.playerChoice == "scissor") {
-        return "Player 1 win";
+        return "Player 1 <br> win";
       } else {
-        return "com win";
+        return "com <br> win";
       }
     } else {
       if (this.playerChoice == "rock") {
-        return "Player 1 win";
+        return "Player 1 <br> win";
       } else {
-        return "com win";
+        return "com <br> win";
       }
     }
   }
@@ -68,12 +68,12 @@ class playGame {
   // Fungsi yang mengumumkan hasil dari pertandingan
   matchResult() {
     let matchResult = document.querySelector(".versus-text");
-    matchResult.classList.remove("result-match-draw", "result-match");
-    matchResult.textContent = this.matchRules();
+    matchResult.classList.remove("result-match", "win", "draw");
+    matchResult.innerHTML = this.matchRules();
     if (this.matchRules() == "draw") {
-      matchResult.classList.add("result-match-draw");
+      matchResult.classList.add("result-match", "draw");
     } else {
-      matchResult.classList.add("result-match");
+      matchResult.classList.add("result-match", "win");
     }
   }
 }
