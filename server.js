@@ -4,6 +4,9 @@ const fs = require("fs");
 const cookieParser = require("cookie-parser");
 const jwt = require("jsonwebtoken");
 const isLoggedIn = require("./middleware/authMiddleware");
+const { v4: uuidv4 } = require("uuid");
+const bcrypt = require("bcrypt");
+const { query } = require("express");
 
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/public/views");
@@ -55,7 +58,11 @@ app.get("/login", (req, res) => {
           if (status == "tokenexpied") {
             res.render("login", { pageTitle: "Login", loginMessage: "Your session has expied, please login to start the game" });
           } else {
-            res.render("login", { pageTitle: "Login", loginMessage: "You are not logged in, please login to start the game" });
+            if (status == "signupsuccess") {
+              res.render("login", { pageTitle: "Login", loginMessage: "Your account has been created successfully, please login to start the game" });
+            } else {
+              res.render("login", { pageTitle: "Login", loginMessage: "You are not logged in, please login to start the game" });
+            }
           }
         }
       }
@@ -73,7 +80,10 @@ app.post("/login", (req, res) => {
   if (!userMatch) {
     res.redirect("/login?status=usernamenotfound");
   } else {
-    if (password == userMatch.password) {
+    const salt = bcrypt.genSaltSync(16);
+    const hash = bcrypt.hashSync(password, salt);
+    const passwordVerify = bcrypt.compareSync(password, hash);
+    if (passwordVerify == true) {
       const token = jwt.sign(
         {
           id: userMatch.id,
@@ -96,7 +106,49 @@ app.get("/logout", (req, res) => {
 });
 
 app.get("/signup", (req, res) => {
-  res.render("signup", { pageTitle: "Sign Up" });
+  const status = req.query.status;
+  if (!status) {
+    res.render("signup", { pageTitle: "Sign Up", loginMessage: "" });
+  } else {
+    if (status == "usernamealreadyexist") {
+      res.render("signup", { pageTitle: "Sign Up", loginMessage: "The username you entered is already registered, please enter a new username" });
+    } else {
+      if (status == "passwordnotmatch") {
+        res.render("signup", { pageTitle: "Sign Up", loginMessage: "Password you entered is not match, please try again" });
+      } else {
+        res.render("login", { pageTitle: "Login", loginMessage: "Your account has been created successfully" });
+      }
+    }
+  }
+});
+
+app.post("/signup", (req, res) => {
+  const { username, password, confirmPassword } = req.body;
+  const data = fs.readFileSync("./data/user.json", "utf-8");
+  const dataUser = JSON.parse(data);
+
+  const userMatch = dataUser.find((item) => {
+    return item.username == username;
+  });
+
+  if (userMatch) {
+    res.redirect("/signup?status=usernamealreadyexist");
+  } else {
+    if (password != confirmPassword) {
+      res.redirect("/signup?status=passwordnotmatch");
+    } else {
+      const salt = bcrypt.genSaltSync(16);
+      const passwordHash = bcrypt.hashSync(password, salt);
+      const newUser = {
+        id: uuidv4(),
+        username,
+        passwordHash,
+      };
+      dataUser.push(newUser);
+      fs.writeFileSync("./data/user.json", JSON.stringify(dataUser, null, 4));
+      res.redirect("/login?status=signupsuccess");
+    }
+  }
 });
 
 app.get("/game", isLoggedIn, (req, res) => {

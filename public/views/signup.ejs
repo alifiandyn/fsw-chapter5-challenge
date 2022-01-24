@@ -45,9 +45,14 @@
           <div class="col-md-4"></div>
           <div class="col-md-4">
             <div class="card" style="background-color: transparent; border: none">
-              <div class="alert alert-warning text-center" role="alert"><strong>Welcome,</strong> please sign up and login to play the game</div>
+              <% if(loginMessage){ %>
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong><%= loginMessage %></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              <% } else{ %> <% } %>
               <div class="card-body rounded" style="background-color: #f3af34">
-                <form action="post">
+                <form action="/signup" method="post">
                   <div class="">
                     <a href="/" class="back-home"><i class="fas fa-arrow-circle-left"> Home</i></a>
                   </div>
@@ -56,24 +61,22 @@
                     <h3 class="mb-3">Rock-Paper-Scissors</h3>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="text" class="form-control input-custom border-dark" id="floatingInput" placeholder="Alifiandyn" />
+                    <input type="text" class="form-control input-custom border-dark" name="username" id="floatingInput" placeholder="Alifiandyn" />
                     <label for="floatingInput">Username</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="password" class="form-control input-custom border-dark" id="floatingPassword" placeholder="Password" />
+                    <input type="password" class="form-control input-custom border-dark" name="password" id="floatingPassword" placeholder="Password" />
                     <label for="floatingPassword">Password</label>
                   </div>
                   <div class="form-floating mb-3">
-                    <input type="password" class="form-control input-custom border-dark" id="floatingConfirmPassword" placeholder="Password" />
+                    <input type="password" class="form-control input-custom border-dark" name="confirmPassword" id="floatingConfirmPassword" placeholder="Password" />
                     <label for="floatingConfirmPassword">Confirm Password</label>
                   </div>
-                  <!-- <div class="row"> -->
                   <div class="form-check mb-3">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
                     <label class="form-check-label" for="flexCheckDefault"> I accept the <strong>Term Of Use</strong> & <strong>Privacy Policy</strong></label>
                   </div>
-                  <!-- </div> -->
-                  <a href="#" class="btn btn-dark w-100" style="min-height: 56px; padding: 16px">Login</a>
+                  <button type="submit" class="btn btn-dark w-100" style="min-height: 56px; padding: 16px">Sign Up</button>
                 </form>
               </div>
               <a href="/login" style="text-align: right !important; text-decoration: none; color: white">Already have an account? Login Here</a>

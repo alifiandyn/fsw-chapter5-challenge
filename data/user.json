@@ -1,7 +1,12 @@
 [
-  {
-    "id": 1,
-    "username": "alifiandyn",
-    "password": 200501
-  }
+    {
+        "id": "53d2e752-b95d-451c-b6f1-be051f4f9a35",
+        "username": "alifiandy.nugraha",
+        "passwordHash": "$2b$16$6.XWmVn0mb9t8ZjHNiERfOxoO9GLdfGPFAznB99Fj2.xC2KqW3RIK"
+    },
+    {
+        "id": "efee7a91-e6d4-489f-9d08-838f9010329a",
+        "username": "anispwym",
+        "passwordHash": "$2b$16$wMfcPalbRQrStRyr66BAQ.BcrKBNalk41Oz9fynYYxPm0t2Qe2uWa"
+    }
 ]
