@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partial/head') %>
+    <link rel="stylesheet" href="/dist/css/custom-style.css" />
+  </head>
+  <body>
+    <section class="main-bg" id="main-bg">
+      <%- include('partial/navbar') %>
+      <div class="container">
+        <div class="col">
+          <div class="row align-items-center" style="min-height: 50rem">
+            <div class="col text-center">
+              <h1>PLAY TRADITIONAL GAME</h1>
+              <h3>Experience new traditional game play</h3>
+              <% if(user){ %>
+              <button class="default-btn" onclick="gamePage()">PLAY GAME</button>
+              <% } else{ %>
+              <button class="default-btn" onclick="loginPage()">PLAY GAME</button>
+              <% } %>
+            </div>
+          </div>
+          <div class="row align-items-end">
+            <div class="col text-center">
+              <a class="link-story-games" href="#galery"
+                >THE STORY
+                <br />
+                <!-- Font Awesome Version -->
+                <i class="fas fa-caret-down fa-2x"></i>
+                <!-- SVG Version -->
+                <!-- <svg width="24" height="12" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.1055 1.25525H1.16522L6.07973 5.26444L11.1055 1.25525Z" stroke="#777777" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+                </svg> -->
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="galery-bg row m-0 align-items-center" id="galery">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 offset-lg-1">
+            <h3>What’s so special?</h3>
+          </div>
+          <div class="col-lg-7"></div>
+          <div class="col-lg-4 offset-lg-1">
+            <h1>THE GAMES</h1>
+          </div>
+          <div class="col-lg-6">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="/assets/rockpaperstrategy-1600.jpg" class="d-block w-100 h-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="/assets/rockpaperstrategy-1600v2.jpg" class="d-block w-100" alt="..." />
+                </div>
+                <div class="carousel-item">
+                  <img src="/assets/rockpaperstrategy-1600v3.jpg" class="d-block w-100" alt="..." />
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            <div class="col-lg"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-bg row m-0 align-items-center">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6"></div>
+          <div class="col-md-6">
+            <h3>What’s so special?</h3>
+            <h1 style="margin-bottom: 4rem">THE FEATURE</h1>
+            <div class="row">
+              <div class="col">
+                <ul class="timeline selected side-line">
+                  <li>
+                    <p class="info-head">TRADTIONAL GAMES</p>
+                    <p class="m-0 info-text">If you miss your childhood, we provide many traditional games here</p>
+                  </li>
+                </ul>
+                <ul class="timeline">
+                  <li>
+                    <p class="info-head">GAME SUIT</p>
+                  </li>
+                  <li>
+                    <p class="info-head">TBD</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="system-requirment-bg">
+      <div class="container">
+        <div class="row">
+          <h4 class="text-center">Can My Computer Run this game?</h4>
+          <div class="col-md-6">
+            <h1>system requirements</h1>
+            <div class="table-responsive">
+              <table class="table table-bordered table-custom">
+                <tbody>
+                  <tr>
+                    <td>
+                      <h3 class="info-head">OS:</h3>
+                      <p class="info-text">
+                        Windows 7 64-bit only<br />
+                        (No OSX support at this time)
+                      </p>
+                    </td>
+                    <td>
+                      <h3 class="info-head">PROCESSOR:</h3>
+                      <p class="info-text">
+                        Intel Core 2 Duo @ 2.4 GHZ or <br />
+                        Athlon X2 @ 2.8 GHZ
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <h3 class="info-head">mEMORY:</h3>
+                      <p class="info-text">4 GB RAM</p>
+                    </td>
+                    <td>
+                      <h3 class="info-head">storage:</h3>
+                      <p class="info-text">8 GB available space</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <h3 class="info-head">GRAPHICS:</h3>
+                      <p class="info-text">
+                        NVIDIA GeForce GTX 660 2GB or <br />
+                        Radeon HD 7850 2GB DirectX11 (Shader Model 5)
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="col-md-6"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="top-score-bg row m-0 align-items-center">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-5 offset-md-1">
+            <h1>TOP SCORES</h1>
+            <p class="info-text" style="margin: 2.5rem 0">This top score from various games provided on this platform</p>
+            <button class="default-btn">SEE MORE</button>
+          </div>
+          <div class="col-md-5">
+            <div class="row">
+              <div class="card offset-md-4">
+                <div class="card-body row align-items-center">
+                  <div class="col-2 p-0">
+                    <img class="img-fluid rounded-circle img-profile" src="assets/evan.png" alt="" />
+                  </div>
+                  <div class="col-8 ps-4">
+                    <h3 class="d-inline top-score-name">Evan Lahti</h3>
+                    <br />
+                    <p class="d-inline info-text player-status">PC Gamer</p>
+                  </div>
+                  <div class="col-2 p-0 text-center">
+                    <img class="img-fluid" style="width: 20px" src="assets/twitter.svg" alt="" />
+                  </div>
+                  <p class="col-12 info-text player-comment m-0">“One of my gaming highlights of the year.”</p>
+                  <p class="col-12 info-muted m-0">June 18, 2021</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="card offset-md-2 mt-4 mb-4">
+                <div class="card-body row align-items-center">
+                  <div class="col-2 p-0">
+                    <img class="img-fluid rounded-circle img-profile" src="assets/jada.png" alt="" />
+                  </div>
+                  <div class="col-8 ps-4">
+                    <h3 class="d-inline top-score-name">Jada Griffin</h3>
+                    <br />
+                    <p class="d-inline info-text player-status">Nerdreactor</p>
+                  </div>
+                  <div class="col-2 p-0 text-center">
+                    <img class="img-fluid" style="width: 20px" src="assets/twitter.svg" alt="" />
+                  </div>
+                  <p class="col-12 info-text player-comment m-0">“The next big thing in the world of streaming and survival games.”</p>
+                  <p class="col-12 info-muted m-0">July 10, 2021</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="card offset-md-3">
+                <div class="card-body row align-items-center">
+                  <div class="col-2 p-0">
+                    <img class="img-fluid rounded-circle img-profile" src="assets/aaron.png" alt="" />
+                  </div>
+                  <div class="col-8 ps-4">
+                    <h3 class="d-inline top-score-name">Aaron Williams</h3>
+                    <br />
+                    <p class="d-inline info-text player-status">Uproxx</p>
+                  </div>
+                  <div class="col-2 p-0 text-center">
+                    <img class="img-fluid" style="width: 20px" src="assets/twitter.svg" alt="" />
+                  </div>
+                  <p class="col-12 info-text player-comment m-0">“Snoop Dogg Playing The Wildly Entertaining ‘SOS’ Is Ridiculous.”</p>
+                  <p class="col-12 info-muted m-0">December 24, 2018</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="subscribe-bg m-0 row align-items-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 offset-md-1 text-center">
+            <img class="img-fluid" src="assets/subscribe-img.png" alt="" />
+          </div>
+          <div class="col-md-5">
+            <h3>Want to stay in <br />touch?</h3>
+            <h1 class="mt-4 mb-4">newsletter SUBSCRIBE</h1>
+            <p class="info-text">In order to start receiving our news, all you have to do is enter your email address. Everything else will be taken care of by us. We will send you emails containing information about game. We don’t spam.</p>
+            <form class="row m-0 table-responsive">
+              <div class="col-8 form-floating p-0">
+                <input type="text" class="form-control input-email-custom" id="email" placeholder="Enter email" name="email" value="youremail@binar.co,id" />
+                <label for="email" class="text-muted">Your email address</label>
+              </div>
+              <div class="col-4">
+                <button type="submit" class="default-btn w-100">Confirm identity</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="list-social-media">
+        <div class="container">
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link nav-link-style" href="#">MAIN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-style" href="#">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-style" href="#">GAME FEATURES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-style" href="#">SYSTEM REQUIRMENT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-style" href="#">QUOTES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-style" href="#"><img src="assets/facebook.svg" alt="facebook" /></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-style" href="#"><img src="assets/twitter.svg" alt="twitter" /></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-style" href="#"><img src="assets/Vector.svg" alt="youtube" /></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-style" href="#"><img src="assets/twitch.svg" alt="twitch" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-term">
+        <div class="container">
+          <hr class="footer-line m-0" />
+          <div class="row pt-4">
+            <div class="col-md-6">
+              <p class="info-muted m-0">© 2020 Your Games, Inc. All Rights Reserved</p>
+            </div>
+            <div class="col-md-6">
+              <p class="footer-term-text m-0">Privacy Policy | Terms of Services | Code of Conduct</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <%- include('partial/js') %>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partial/head') %>
+    <style>
+      .input-custom {
+        background: rgb(150, 212, 6);
+        border-radius: 5px;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 25px;
+        color: #212529;
+      }
+
+      .back-home {
+        color: #212529;
+        text-decoration: none;
+        font-family: "Open Sans", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+      }
+
+      .back-home:hover {
+        color: rgb(115, 53, 114);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="col">
+        <div
+          class="row align-items-center"
+          style="
+            min-height: 100vh;
+            background-image: radial-gradient(189.96% 61.18% at 50% 38.82%, rgba(255, 181, 72, 0) 0%, rgba(52, 44, 29, 0.80319) 73.22%, #08090a 99.74%), url('assets/main-bg.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <div class="card" style="background-color: transparent; border: none">
+              <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong><%= loginMessage %></strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              <div class="card-body rounded" style="background-color: #f3af34">
+                <div class="">
+                  <a href="/" class="back-home"><i class="fas fa-arrow-circle-left"> Home</i></a>
+                </div>
+                <div class="text-center">
+                  <img src="https://global-uploads.webflow.com/5e70b9a791ceb781b605048c/6152ae609d46491e37aa9af9_logo_binar-academy_horizontal_magenta_bg-transparan.png" alt="" / style="width: 300px;">
+                  <h3 class="mb-3">Rock-Paper-Scissors</h3>
+                </div>
+                <form action="/login" method="post">
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control input-custom border-dark" name="username" id="floatingInput" placeholder="Alifiandyn" />
+                    <label for="floatingInput">Username</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="password" class="form-control input-custom border-dark" name="password" id="floatingPassword" placeholder="Password" />
+                    <label for="floatingPassword">Password</label>
+                  </div>
+                  <!-- <div class="row"> -->
+                  <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault"> Remember me </label>
+                  </div>
+                  <!-- </div> -->
+                  <button type="submit" class="btn btn-dark w-100" style="min-height: 56px; padding: 16px">Login</button>
+                </form>
+              </div>
+              <a href="/signup" style="text-align: right !important; text-decoration: none; color: white">Don't have an account? Sign Up</a>
+            </div>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+    </div>
+
+    <%- include('partial/js') %>
+  </body>
+</html>

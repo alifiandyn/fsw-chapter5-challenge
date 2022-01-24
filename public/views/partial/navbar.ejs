@@ -1,0 +1,41 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand col-2 nav-font-style" href="#main-bg">LOGO</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse col-auto navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 mb-0">
+        <li class="nav-item">
+          <a class="nav-link nav-link-style" aria-current="page" href="#main-bg">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-style" href="#">WORK</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-style" href="#">CONTACT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-style" href="#">ABOUT ME</a>
+        </li>
+      </ul>
+      <div class="navbar-nav d-flex mt-0">
+        <% if(user){ %>
+        <li class="nav-item dropdown nav-link-style">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false"><%= user %></a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="/logout">Logout</a></li>
+          </ul>
+        </li>
+        <% } else{ %>
+        <li class="nav-item">
+          <a class="nav-link nav-link-style" href="/signup">SIGN UP</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-link-style" href="/login">LOGIN</a>
+        </li>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <%- include('partial/head') %>
+    <link rel="stylesheet" href="dist/css/game-style.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="col-sm-1 text-center">
+            <button class="btn" onclick="backHome()">
+              <span class="btn-back"><</span>
+            </button>
+          </div>
+          <div class="col-sm-1 text-center">
+            <img class="img-fluid" src="assets/game-logo.png" alt="" />
+          </div>
+          <div class="col-sm-10 game-title">ROCK PAPER SCISSORS</div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding: 0 15%">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-sm-4 col">
+            <p class="player-text">PLAYER 1</p>
+            <div class="text-center">
+              <div class="player-choose-rock my-5 choice">
+                <img class="img-fluid mx-auto player-choose player-choose-rock-img" src="assets/game-batu.png" alt="rock" />
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="player-choose-paper my-5 choice">
+                <img class="img-fluid mx-auto player-choose player-choose-paper-img" src="assets/game-kertas.png" alt="paper" />
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="player-choose-scissor my-5 choice">
+                <img class="img-fluid mx-auto player-choose player-choose-scissor-img" src="assets/game-gunting.png" alt="scissor" />
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col align-self-center">
+            <p class="versus-text">VS</p>
+          </div>
+          <div class="col-sm-4 col">
+            <p class="player-text">COM</p>
+            <div class="text-center">
+              <div class="com-choose-rock my-5 choice">
+                <img class="img-fluid com-choose-rock-img" src="assets/game-batu.png" alt="rock" />
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="com-choose-paper my-5 choice">
+                <img class="img-fluid mx-auto com-choose-paper-img" src="assets/game-kertas.png" alt="paper" />
+              </div>
+            </div>
+            <div class="text-center">
+              <div class="com-choose-scissor my-5 choice">
+                <img class="img-fluid mx-auto com-choose-scissor-img" src="assets/game-gunting.png" alt="scissor" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container-fluid">
+        <div class="row justify-content-center py-5">
+          <button class="btn" onclick="refreshPage()">
+            <img class="img-fluid img-refresh text-center" src="assets/refresh-btn.png" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <%- include('partial/js') %>
+  </body>
+</html>
