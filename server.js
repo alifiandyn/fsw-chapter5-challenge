@@ -76,7 +76,7 @@ app.post("/login", (req, res) => {
   const userMatch = dataUser.find((item) => {
     return item.username == username;
   });
-  // console.log(password);
+
   if (!userMatch) {
     res.redirect("/login?status=usernamenotfound");
   } else {
