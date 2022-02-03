@@ -76,13 +76,11 @@ app.post("/login", (req, res) => {
   const userMatch = dataUser.find((item) => {
     return item.username == username;
   });
-
+  // console.log(password);
   if (!userMatch) {
     res.redirect("/login?status=usernamenotfound");
   } else {
-    const salt = bcrypt.genSaltSync(16);
-    const hash = bcrypt.hashSync(password, salt);
-    const passwordVerify = bcrypt.compareSync(password, hash);
+    const passwordVerify = bcrypt.compareSync(password, userMatch.passwordHash);
     if (passwordVerify == true) {
       const token = jwt.sign(
         {

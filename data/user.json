@@ -8,5 +8,10 @@
         "id": "efee7a91-e6d4-489f-9d08-838f9010329a",
         "username": "anispwym",
         "passwordHash": "$2b$16$wMfcPalbRQrStRyr66BAQ.BcrKBNalk41Oz9fynYYxPm0t2Qe2uWa"
+    },
+    {
+        "id": "4cf069a8-0129-481f-a4b3-4029f82ff629",
+        "username": "admin",
+        "passwordHash": "$2b$16$sy2zFJTzhcQ5qzKsN/OAbuAXH91PER1pFhDKsDlHRy00.eu0sWwC."
     }
 ]
