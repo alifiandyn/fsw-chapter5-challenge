@@ -28,11 +28,11 @@
         <li>Mengoperasikan NodeJS dengan menggunakan terminal</li>
         <li>Menginstall package dengan menggunakan NPM atau yarn</li>
         <li>Serving static HTML, static file, dan json ke browser</li>
-        <li>Routing manual dengan nodejs</li>
-        <li>Menggunakan library express js sebagai framework web</li>
-        <li>Routing pada express js</li>
+        <li>Routing manual dengan NodeJS</li>
+        <li>Menggunakan library ExpressJS sebagai framework web</li>
+        <li>Routing pada ExpressJS</li>
         <li>Penggunaan middleware</li>
-        <li>Membuat static rest full API (JSON) dengan express</li>
+        <li>Membuat static rest full API (JSON) dengan ExpressJS</li>
         <li>Melakukan export/import</li>
       </ol>
     </td>
